@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="theme-1">
+    <header class="header">
+      <p class="header__logo">calc</p>
+      <div class="header__right">
+        <p class="header__theme">theme</p>
+        <div class="header__nums">
+          <div class="header__box">
+            <input type="radio" name="themeSwitch" id="1" value="1" checked />
+            <label for="1" class="header__label">1</label>
+          </div>
+          <div class="header__box">
+            <input type="radio" name="themeSwitch" id="2" value="2" />
+            <label for="2" class="header__label">2</label>
+          </div>
+          <div class="header__box">
+            <input type="radio" name="themeSwitch" id="3" value="3" />
+            <label for="3" class="header__label">3</label>
+          </div>
+        </div>
+        <div class="header__switch" data-theme="1"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="calculator">
+        <div class="calculator__display">
+          <div class="calculator__top">
+            <p class="calculator__previous"></p>
+            <p class="calculator__mathSign"></p>
+          </div>
+          <p class="calculator__current"></p>
+        </div>
+        <div class="calculator__keys">
+          <div class="calculator__key calculator__number">7</div>
+          <div class="calculator__key calculator__number">8</div>
+          <div class="calculator__key calculator__number">9</div>
+          <div class="calculator__key del">del</div>
+          <div class="calculator__key calculator__number">4</div>
+          <div class="calculator__key calculator__number">5</div>
+          <div class="calculator__key calculator__number">6</div>
+          <div class="calculator__key operator">+</div>
+          <div class="calculator__key calculator__number">1</div>
+          <div class="calculator__key calculator__number">2</div>
+          <div class="calculator__key calculator__number">3</div>
+          <div class="calculator__key operator">-</div>
+          <div class="calculator__key calculator__number">.</div>
+          <div class="calculator__key calculator__number">0</div>
+          <div class="calculator__key operator">/</div>
+          <div class="calculator__key operator">x</div>
+          <div class="calculator__key reset">reset</div>
+          <div class="calculator__key equal">=</div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

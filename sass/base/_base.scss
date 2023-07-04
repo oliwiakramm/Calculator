@@ -1,0 +1,18 @@
+@use "../abstracts" as a;
+body {
+  min-height: 100vh;
+  font-family: a.$main-font;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  @include a.media-breakpoint-up(48rem) {
+    justify-content: center;
+  }
+}
+
+.main {
+  margin: 0 1.5rem;
+  width: 100%;
+}

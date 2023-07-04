@@ -1,0 +1,118 @@
+@use "../abstracts/" as a;
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 21rem;
+  margin: 0 auto;
+
+  @include a.media-breakpoint-up(62rem) {
+    max-width: 33.5rem;
+  }
+
+  &__display {
+    height: 5.5rem;
+    width: 100%;
+    border-radius: 0.6rem;
+    color: a.$white-clr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    overflow-x: auto;
+
+    @include a.media-breakpoint-up(62rem) {
+      height: 8rem;
+      font-size: 3.3rem;
+      padding: 1rem 2rem;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__previous,
+  &__mathSign {
+    font-size: 1rem;
+    @include a.media-breakpoint-up(62rem) {
+      font-size: 2rem;
+    }
+  }
+  &__previous {
+    margin-right: 0.3rem;
+  }
+
+  &__current {
+    overflow-x: auto;
+    max-width: 19rem;
+    font-size: 2rem;
+    @include a.media-breakpoint-up(62rem) {
+      max-width: 29.5rem;
+      font-size: 2.45rem;
+    }
+  }
+
+  &__keys {
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.78rem;
+    @include a.media-breakpoint-up(62rem) {
+      padding: 1.9rem 1.6rem;
+      border-radius: 0.8rem;
+      gap: 1.5rem;
+    }
+  }
+
+  &__key {
+    width: 3.8rem;
+    height: 4rem;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9rem;
+    border-bottom: 4px solid transparent;
+    padding-top: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in;
+
+    @include a.media-breakpoint-up(62rem) {
+      width: 100%;
+      font-size: 2.3rem;
+    }
+
+    &.reset {
+      grid-column: span 2;
+      width: 100%;
+      text-transform: uppercase;
+      color: a.$white-clr;
+      font-size: 1.2rem;
+
+      @include a.media-breakpoint-up(62rem) {
+        font-size: 1.7rem;
+      }
+    }
+
+    &.equal {
+      grid-column: span 2;
+      width: 100%;
+      font-size: 1.2rem;
+      @include a.media-breakpoint-up(62rem) {
+        font-size: 1.7rem;
+      }
+    }
+
+    &.del {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      @include a.media-breakpoint-up(62rem) {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@use "../abstracts" as a;
+.header {
+  margin: 0 1.5rem;
+  padding-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 21rem;
+  width: 100%;
+
+  @include a.media-breakpoint-up(62rem) {
+    max-width: 33.5rem;
+  }
+
+  &__logo {
+    font-size: 1.9rem;
+    padding-left: 0.5rem;
+  }
+
+  &__right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__theme {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    grid-row: 2/3;
+    align-self: end;
+    justify-self: center;
+    padding-right: 1rem;
+    padding-bottom: 0.3rem;
+  }
+
+  &__nums {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding-bottom: 0.3rem;
+    grid-column: 2/3;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__label {
+    font-size: 0.7rem;
+    cursor: pointer;
+    @include a.media-breakpoint-up(62rem) {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__switch {
+    width: 4.5rem;
+    height: 1.6rem;
+    border-radius: 2rem;
+    grid-column: 2/3;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      top: 50%;
+      left: 0.3rem;
+      cursor: pointer;
+      transition: transform 0.2s ease-in;
+    }
+
+    &[data-theme="1"]:after {
+      transform: translate(0, -50%);
+    }
+
+    &[data-theme="2"]:after {
+      transform: translate(130%, -50%);
+    }
+
+    &[data-theme="3"]:after {
+      transform: translate(290%, -50%);
+    }
+  }
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+}

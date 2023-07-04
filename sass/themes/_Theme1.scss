@@ -1,0 +1,70 @@
+@use "../abstracts" as a;
+.theme-1 {
+  background-color: a.$main-bgc-clr1;
+
+  & .header__logo {
+    color: a.$white-clr;
+  }
+
+  & .header__theme {
+    color: a.$white-clr;
+  }
+
+  & .header__label {
+    color: a.$white-clr;
+  }
+
+  & .header__switch {
+    background-color: a.$toggleKeypad-clr1;
+
+    &:after {
+      background-color: a.$equalToggle-clr1;
+    }
+
+    &:hover::after {
+      @include a.hoverLight(a.$equalToggle-clr1);
+    }
+  }
+
+  & .calculator__display {
+    background-color: a.$screen-clr1;
+  }
+
+  & .calculator__keys {
+    background-color: a.$toggleKeypad-clr1;
+  }
+
+  & .calculator__key {
+    background-color: a.$keyBg-clr1;
+    border-color: a.$keyShadow-clr1;
+
+    &:hover {
+      @include a.hoverLight(a.$keyBg-clr1);
+    }
+    &.reset {
+      background-color: a.$delResBg-clr1;
+      border-color: a.$keyResDelShadow-clr1;
+      &:hover {
+        @include a.hoverLight(a.$delResBg-clr1);
+      }
+    }
+
+    &.equal {
+      background-color: a.$equalToggle-clr1;
+      color: a.$white-clr;
+      border-color: a.$equalShadow-clr1;
+      &:hover {
+        @include a.hoverLight(a.$equalToggle-clr1);
+      }
+    }
+
+    &.del {
+      background-color: a.$delResBg-clr1;
+      border-color: a.$keyResDelShadow-clr1;
+      color: a.$white-clr;
+      &:hover {
+        @include a.hoverLight(a.$delResBg-clr1);
+      }
+    }
+  }
+}
