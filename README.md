@@ -18,7 +18,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL:(https://oliwiakramm.github.io/Calculator/)]
+- Live Site URL:(https://oliwiakramm.github.io/Calculator/)
 
 ## My process
 
